@@ -9,13 +9,14 @@ describe('modelGuitar', () => {
         expect(guitar.strings[0].length).to.equal(config.topFret + 1);
     });
 
-    test('If findNoteInStrings can find the right notes', () => {
+    test('If findNotesInStrings can find the right notes', () => {
         const guitar = new modelGuitar();
-        expect(guitar.findNoteInStrings).to.be.a('function');
+        expect(guitar.findNotesInStrings).to.be.a('function');
         /**
          * Find just an array of highlighted notes
          */
-        const onlyHighlightedNotes = guitar.findNoteInStrings(['G', 'B']).map(string => (
+
+        const onlyHighlightedNotes = guitar.findNotesInStrings(['G', 'B']).map(string => (
             string.filter(note => note.highlight)
         ));
         expect(onlyHighlightedNotes.length > 0).to.equal(true);

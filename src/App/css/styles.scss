@@ -1,0 +1,17 @@
+.GuitarView {
+    td {
+        min-width: 50px;
+        text-align: center;
+    }
+    span {
+        padding: 5px;
+        display: block;
+    }
+    b {
+        background-color: crimson;
+        color: white;
+        padding: 5px;
+        border-radius: 10px;
+        display: block;
+    }
+}
